@@ -126,7 +126,7 @@ class Converter:
             should_destructure_arg = lambda sig, param: False
         self._should_destructure_arg = should_destructure_arg
         if not post_convert:
-            post_convert = lambda conv, node, ir: None
+            post_convert = lambda node, ir: None
         self._post_convert = post_convert
 
     def populate_index(self, root: "IndexType") -> "Converter":
